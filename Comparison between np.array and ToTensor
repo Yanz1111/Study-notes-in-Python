@@ -1,0 +1,12 @@
+import os
+import torchvision.transforms as transforms
+import numpy as np
+from PIL import Image
+
+img = np.array(Image.open('root'))
+
+print(img.shape)#(H, W, C)
+
+trans1 = transforms.ToTensor()
+img_trans1= trans1(img)
+print(img_trans1.shape)#(C, H, W)
